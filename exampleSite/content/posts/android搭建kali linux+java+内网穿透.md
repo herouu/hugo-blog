@@ -26,4 +26,4 @@ categories: ["环境搭建"]
 apt-get install openjdk-8-jdk
 然后把maven,tomcat也安装上，然后java环境构建完毕，启动tomcat,手机的ip：port为http://192.168.1.101:8080  , 服务成功访问。  
 4. 手机上倒腾frp,内网穿透
-  参照 {% post_link 内网映射frp服务器环境搭建 内网映射frp服务器环境搭建 %}
+  参照 [内网映射frp服务器环境搭建](/内网映射frp服务器环境搭建   )
