@@ -30,7 +30,7 @@ license: ""
 对于管理系统而言，基本上就是权限的管理、表单跟表格的操作，所以看一个管理系统是否值得学习，就是看权限的完成度和表格、表单的复杂度。
 
 
-1.[]
+1.[vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful)
 2. [ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro)
 3. [iview-admin](https://github.com/iview/iview-admin)
 4. [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
