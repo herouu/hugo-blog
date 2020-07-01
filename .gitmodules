@@ -1,0 +1,6 @@
+[submodule "example/public"]
+	path = example/public
+	url = https://github.com/alertcode/alertcode.github.io.git
+[submodule "exampleSite/public"]
+	path = exampleSite/public
+	url = https://github.com/alertcode/alertcode.github.io.git
