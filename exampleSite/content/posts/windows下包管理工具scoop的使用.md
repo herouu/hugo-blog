@@ -34,6 +34,7 @@ scoop bucket add extras
 scoop bucket add jetbrains
 scoop bucket add tomato https://github.com/zhoujin7/tomato.git
 scoop bucket add dorado https://github.com/h404bi/dorado.git
+scoop bucket add nonportable
 ```
 ## 使用scoop搭建快速开发环境
 
@@ -48,11 +49,13 @@ scoop install mobaxterm
 scoop install nodejs-lts
 scoop install notepadplusplus
 scoop install OracleJDK8
-scoop install terminus
 scoop install vscode
-scoop install WebStorm
 scoop install v2rayn
-
+scoop install fluent-terminal-np
+scoop install ccleaner
+scoop install geekuninstaller
+scoop install picgo
+scoop install Registryworkshop
 ```
 
 ## 参考资料
