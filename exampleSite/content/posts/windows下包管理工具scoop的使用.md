@@ -1,6 +1,6 @@
 ---
 title: "Windows下包管理工具scoop的使用"
-date: 2020-01-30T16:02:25+08:00
+date: 2020-07-21T16:02:25+08:00
 draft: false
 
 categories: ["环境搭建"]  
