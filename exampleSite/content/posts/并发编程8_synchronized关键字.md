@@ -8,8 +8,8 @@ author: ""
 authorLink: ""
 description: ""
 
-tags: []
-categories: []
+tags: ['多线程']
+categories: ['多线程']
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
