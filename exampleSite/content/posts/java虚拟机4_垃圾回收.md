@@ -1,9 +1,9 @@
 ---
-title: jvm虚拟机4_垃圾回收
+title: java虚拟机4_垃圾回收
 date: 2018-04-10 23:04:27
-tags: ["jvm虚拟机"]
+tags: ["java虚拟机"]
 
-categories: ["jvm虚拟机"]
+categories: ["java虚拟机"]
 ---
 jvm 的垃圾回收，主要考虑下面的 3 个问题：
 &emsp;&emsp; 如何判定对象为垃圾对象
@@ -28,7 +28,7 @@ jvm 的垃圾回收，主要考虑下面的 3 个问题：
 
 - 标记清除算法
   算法如其名。
-  ![img](标记清除算法.png)
+  ![img](https://bj.bcebos.com/v1/alertcode-blog/java虚拟机4_垃圾回收/Snipaste_2020-07-29_18-17-34.png)
   <div align="center">黄色-要清除的垃圾;白色-释放的空间;红色-占用的内存</div>
   &emsp;&emsp;标记：标记需要回收的对象（可达性分析法）
   &emsp;&emsp;清除：大对象不连续空间寻址，如果找不到则会再次触发垃圾回收。所以，有效率和空间问题。

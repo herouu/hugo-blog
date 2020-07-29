@@ -1,9 +1,9 @@
 ---
-title: jvm虚拟机1_jvm内存溢出问题的分析与解决
+title: java虚拟机1_jvm内存溢出问题的分析与解决
 date: 2018-03-15 18:16:40
-tags: ["jvm虚拟机"]
+tags: ["java虚拟机"]
 
-categories: ["jvm虚拟机"]
+categories: ["java虚拟机"]
 ---
 
 学习一下 java 虚拟机系列，之一
@@ -53,5 +53,4 @@ public class OutOfMemoryDemo {
 }
 ```
 
-&emsp;&emsp;使用分析工具 MAT(Eclipse Memory Analyzer)，进行分析，很容易定位到内存溢出的原因，即频繁的创建对象。参照下图：
-![img](内存分析.jpg)
+&emsp;&emsp;使用分析工具 MAT(Eclipse Memory Analyzer)，进行分析，很容易定位到内存溢出的原因，即频繁的创建对象。
