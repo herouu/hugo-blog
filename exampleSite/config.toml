@@ -454,13 +454,13 @@ enableEmoji = true
       # Utterances comment config (https://utteranc.es/)
       # Utterances comment 评论系统设置 (https://utteranc.es/)
       [params.page.comment.utterances]
-        enable = false
+        enable = true
         # owner/repo
-        repo = ""
+        repo = "herouu/blog-comment"
         issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
+        label = "herouu"
+        lightTheme = "preferred-color-scheme"
+        darkTheme = "photon-dark"
     # Third-party library config
     # 第三方库配置
     [params.page.library]
