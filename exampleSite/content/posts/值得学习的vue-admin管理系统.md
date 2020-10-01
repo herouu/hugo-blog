@@ -24,6 +24,8 @@ math:
 lightgallery: false
 license: ""
 ---
+值得学习的vue-admin管理系统
+<!--more-->
 
 ### 值得学习的vue-admin管理系统
 
