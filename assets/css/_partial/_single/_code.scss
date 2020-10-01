@@ -28,6 +28,9 @@ pre {
     vertical-align: text-bottom;
   }
 }
+p > code{
+  display: inline;
+}
 
 code, pre, .highlight table, .highlight tr, .highlight td {
   background: $code-background-color;

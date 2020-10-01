@@ -3,5 +3,8 @@
 // 自定义样式
 // ==============================
 p {
-  text-indent: 2em
+  text-indent: 2em;
+}
+article.single.summary > .content{
+  text-indent: 2em;
 }
