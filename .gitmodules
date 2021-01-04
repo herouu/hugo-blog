@@ -1,3 +1,3 @@
 [submodule "exampleSite/public"]
 	path = exampleSite/public
-	url = git@e.coding.net:alertcode/lengyan-blog-site/lengyan-blog-site.git
+	url = https://e.coding.net/alertcode/lengyan-blog-site/lengyan-blog-site.git
