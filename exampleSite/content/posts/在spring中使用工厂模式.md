@@ -8,8 +8,8 @@ author: ""
 authorLink: ""
 description: ""
 
-tags: ["设计模式","spring"]
-categories: ["设计模式","spring"]
+tags: ["设计模式","springboot"]
+categories: ["设计模式","springboot"]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
