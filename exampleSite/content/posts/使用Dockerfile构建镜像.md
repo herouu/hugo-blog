@@ -1,7 +1,8 @@
 ---
 title: 使用Dockerfile构建镜像境搭建
 date: 2018-03-30 01:59:34
-
+tags: ["docker"]
+categories: ['docker']
 ---
 
 docker 创建镜像有两种方式

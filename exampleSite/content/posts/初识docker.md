@@ -1,8 +1,8 @@
 ---
 title: 初识docker
 date: 2018-03-27 21:58:00
-tags: ["环境搭建"]
-categories: ["环境搭建"]
+tags: ["环境搭建",'docker']
+categories: ["docker"]
 
 ---
 &emsp;&emsp;早就对docker产生兴趣，最近正好赶上项目不是很急，然后趁着闲暇时间折腾一下docker，没想到docker如此简单。

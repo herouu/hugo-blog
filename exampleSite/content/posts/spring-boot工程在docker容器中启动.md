@@ -1,12 +1,12 @@
 ---
 title: spring_boot工程在docker容器中启动
 date: 2019-03-23 00:07:30
-tags: ["springboot"]
-
+tags: ["springboot","docker"]
+categories: ['docker']
 ---
 
-&emsp;&emsp;自己搭建的一个简单的 springboot 模板工程是不支持 docker 容器启动的，况且 docker 在经历了几年的洗礼之后，相对来讲也比较成熟。不像之前资料比较少。不知道大家有没有经历过这样的场景，我在开发环境、测试环境、uat 环境打包部署都很正常，但是一到了发布生产的时候就会出各种奇葩的问题，问题的最大根源就是环境不一致问题。如何解决这个问题，就是镜像技术。让 N 台机器使用的是一套环境，包括软件及相应的版本。以前有使用 vmware 的，这个东西相当于 clone 了一台机器出来，但是很耗资源。相对而言 docker 就比较轻量，而且资源的利用率比较高。
-&emsp;&emsp;在 java 工程中应该如何使用 docker 呢？
+自己搭建的一个简单的 springboot 模板工程是不支持 docker 容器启动的，况且 docker 在经历了几年的洗礼之后，相对来讲也比较成熟。不像之前资料比较少。不知道大家有没有经历过这样的场景，我在开发环境、测试环境、uat 环境打包部署都很正常，但是一到了发布生产的时候就会出各种奇葩的问题，问题的最大根源就是环境不一致问题。如何解决这个问题，就是镜像技术。让 N 台机器使用的是一套环境，包括软件及相应的版本。以前有使用 vmware 的，这个东西相当于 clone 了一台机器出来，但是很耗资源。相对而言 docker 就比较轻量，而且资源的利用率比较高。
+在 java 工程中应该如何使用 docker 呢？
 
 <!--more-->
 
@@ -30,7 +30,7 @@ tags: ["springboot"]
 
 ### 工程中添加 Dockerfile
 
-&emsp;&emsp;注意`Dockerfile`为固定名字,配置如下，文件路径跟 pom.xml 为同一级。
+注意`Dockerfile`为固定名字,配置如下，文件路径跟 pom.xml 为同一级。
 
 ```
 FROM openjdk:8-jdk-alpine
@@ -49,7 +49,7 @@ yum install docker
 ```
 
 - 打包编译
-  &emsp;&emsp;工程文件路径下进行打包
+  工程文件路径下进行打包
 
 ```
 mvn clean package dockerfile:build

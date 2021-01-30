@@ -19,9 +19,9 @@
         {{- end -}}
 
         {{- /* Posts */ -}}
-        {{- if ne $posts.enable false | and .Site.RegularPages -}}
+        {{- if ne $posts.enable false | and .Site.RegularPages | and -}}
             {{- /* Paginate */ -}}
-            {{- $pages := where .Site.RegularPages "Type" "posts" -}}
+            {{- $pages := where .Site.RegularPages "Type" "not in" .Site.Params.not_included -}}
             {{- if .Site.Params.page.hiddenFromHomePage -}}
                 {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
             {{- else -}}

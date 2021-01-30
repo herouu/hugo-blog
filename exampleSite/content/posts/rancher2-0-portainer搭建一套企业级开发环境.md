@@ -1,7 +1,8 @@
 ---
 title: rancher2.0+portainer快速搭建一套企业开发环境
 date: 2019-04-28 11:37:46
-tags: ["环境搭建"]
+tags: ["环境搭建","docker"]
+categories: ['docker']
 
 ---
 

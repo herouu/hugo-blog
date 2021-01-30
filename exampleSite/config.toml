@@ -78,7 +78,7 @@ enableEmoji = true
         pre = ""
         post = ""
         name = "关于"
-        url = "/about/"
+        url = "/about/info"
         title = ""
         weight = 5
       [[languages.zh-cn.menu.main]]
@@ -94,6 +94,8 @@ enableEmoji = true
       description = "关于 LoveIt 主题"
       # 网站关键词
       keywords = ["Theme", "Hugo"]
+      # home页不包含的目录
+      not_included = ['demo',"随笔","posts","springboot翻译","about","面试"]
       # 应用图标配置
       [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
