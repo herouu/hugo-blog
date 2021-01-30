@@ -19,7 +19,7 @@
         {{- end -}}
 
         {{- /* Posts */ -}}
-        {{- if ne $posts.enable false | and .Site.RegularPages | and -}}
+        {{- if ne $posts.enable false | and .Site.RegularPages -}}
             {{- /* Paginate */ -}}
             {{- $pages := where .Site.RegularPages "Type" "not in" .Site.Params.not_included -}}
             {{- if .Site.Params.page.hiddenFromHomePage -}}
