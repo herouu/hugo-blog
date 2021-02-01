@@ -18,15 +18,30 @@
             </div>
         {{- end -}}
 
+
         {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}
+
             {{- /* Paginate */ -}}
             {{- $pages := where .Site.RegularPages "Type" "not in" .Site.Params.not_included -}}
+            {{- if gt (len .Site.Params.not_posts_included) 0 -}}
+                {{- $resultPage := slice -}}
+                {{- range $pages -}}
+                    {{- if in .Site.Params.not_posts_included  (path.Dir .File.Dir) -}}
+                    {{- else -}}
+                        {{- $resultPage = $resultPage | append .Page -}}
+                    {{- end -}}
+                {{- end -}}
+                {{- $pages = $resultPage -}}
+            {{ end }}
+
             {{- if .Site.Params.page.hiddenFromHomePage -}}
-                {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
+            {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
             {{- else -}}
-                {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
+            {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
             {{- end -}}
+
+
             {{- with $posts.paginate | default .Site.Params.paginate -}}
                 {{- $pages = $.Paginate $pages . -}}
             {{- else -}}

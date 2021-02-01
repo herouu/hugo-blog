@@ -96,6 +96,8 @@ enableEmoji = true
       keywords = ["Theme", "Hugo"]
       # home页不包含的目录
       not_included = ["about"]
+      # posts
+      not_posts_included = ["posts/demo"]
       # 应用图标配置
       [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题

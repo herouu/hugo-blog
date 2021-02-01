@@ -11,7 +11,7 @@ license: ""
 
 tags: ["markdown"]
 categories: ["markdown"]
-hiddenFromHomePage: true
+hiddenFromHomePage: false
 
 featuredImage: "/images/basic-markdown-syntax/featured-image.png"
 featuredImagePreview: ""
