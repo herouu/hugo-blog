@@ -7,6 +7,8 @@
     {{- $terms := .Data.Terms.ByCount -}}
     {{- $type := .Type -}}
 
+
+
     <div class="page archive">
         {{- /* Title */ -}}
         <h2 class="single-title animated pulse faster">
@@ -19,37 +21,54 @@
                 {{- range $terms -}}
                     {{- $term := .Term -}}
                     {{- $pages := .Pages -}}
+                    {{- $resultPage := slice -}}
                     {{- with $.Site.GetPage "taxonomy" (printf "%v/%v" $type $term) -}}
-                    <div class="card-item">
+                        {{- range $pages -}}
+                            {{- if in .Site.Params.not_included .Page.Type -}}
+                            {{- else -}}
+                            {{- $resultPage = $resultPage | append .Page -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{ if gt (len $resultPage) 0}}
+                            <div class="card-item">
                         <div class="card-item-wrapper">
                             <h3 class="card-item-title">
                                 <a href="{{ .RelPermalink }}">
                                     <i class="far fa-folder fa-fw"></i>&nbsp;{{ .Page.Title }}
                                 </a>
                             </h3>
-                            {{- range first 5 $pages -}}
+                            {{- range first 5  $resultPage -}}
                                 <article class="archive-item">
                                     <a href="{{ .RelPermalink }}" class="archive-item-link">
                                         {{- .Title -}}
                                     </a>
                                 </article>
                             {{- end -}}
-                            {{- if gt (len $pages) 5 -}}
+                            {{- if gt (len  $resultPage) 5 -}}
                                 <span class="more-post">
                                     <a href="{{ .RelPermalink }}" class="more-single-link">{{ T "more" }} >></a>
                                 </span>
                             {{- end -}}
                         </div>
                     </div>
+                        {{- end -}}
                     {{- end -}}
                 {{- end -}}
             </div>
-
         {{- /* Tag Cloud Page */ -}}
         {{- else if eq $taxonomies "tags" -}}
             <div class="tag-cloud-tags">
-                {{- range $.Site.Taxonomies.tags.ByCount -}}
-                    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <sup>{{ .Count }}</sup></a>
+                {{- range $key,$value := $.Site.Taxonomies.tags.ByCount -}}
+                {{- $resultPage := slice -}}
+                    {{- range $value.Pages -}}
+                      {{- if in .Site.Params.not_included .Page.Type -}}
+                      {{- else -}}
+                          {{- $resultPage = $resultPage | append .Page -}}
+                      {{- end -}}
+                    {{- end -}}
+                {{ if gt (len $resultPage) 0}}
+                <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <sup>{{ (len $resultPage) }}</sup></a>
+                {{- end -}}
                 {{- end -}}
             </div>
         {{- end -}}
