@@ -8,8 +8,8 @@ author: ""
 authorLink: ""
 description: ""
 
-tags: ['vue']
-categories: ['vue']
+tags: ['Vue']
+categories: ['Vue']
 
 hiddenFromHomePage: false
 hiddenFromSearch: false

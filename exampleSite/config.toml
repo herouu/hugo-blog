@@ -95,7 +95,7 @@ enableEmoji = true
       # 网站关键词
       keywords = ["Theme", "Hugo"]
       # home页不包含的目录
-      not_included = ['demo',"随笔","posts","springboot翻译","about","面试"]
+      not_included = ["about"]
       # 应用图标配置
       [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
@@ -607,7 +607,7 @@ enableEmoji = true
   # Table Of Contents settings
   # 目录设置
   [markup.tableOfContents]
-    startLevel = 2
+    startLevel = 1
     endLevel = 6
 
 # Author config

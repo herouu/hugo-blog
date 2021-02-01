@@ -11,7 +11,7 @@ license: ""
 
 tags: ["markdown"]
 categories: ["markdown"]
-hiddenFromHomePage: false
+hiddenFromHomePage: true
 
 featuredImage: "/images/emoji-support/featured-image.jpg"
 featuredImagePreview: ""

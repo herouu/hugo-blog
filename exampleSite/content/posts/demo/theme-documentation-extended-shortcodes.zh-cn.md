@@ -10,6 +10,7 @@ description: "LoveIt 主题在 Hugo 内置的 shortcode 的基础上提供多个
 
 tags: ["markdown"]
 categories: ["markdown"]
+hiddenFromHomePage: true
 featuredImage: "/images/theme-documentation-extended-shortcodes/featured-image.jpg"
 featuredImagePreview: "/images/theme-documentation-extended-shortcodes/featured-image-preview.jpg"
 
