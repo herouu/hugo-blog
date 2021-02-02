@@ -26,11 +26,14 @@
                         {{- range $pages -}}
                             {{- if in .Site.Params.not_included .Page.Type -}}
                             {{- else -}}
-                            {{- $resultPage = $resultPage | append .Page -}}
+                                    {{- if in .Site.Params.not_posts_included  (path.Dir .File.Dir) -}}
+                                    {{- else -}}
+                                    {{- $resultPage = $resultPage | append .Page -}}
+                                    {{- end -}}
                             {{- end -}}
                         {{- end -}}
                         {{ if gt (len $resultPage) 0}}
-                            <div class="card-item">
+                        <div class="card-item">
                         <div class="card-item-wrapper">
                             <h3 class="card-item-title">
                                 <a href="{{ .RelPermalink }}">
@@ -63,7 +66,10 @@
                     {{- range $value.Pages -}}
                       {{- if in .Site.Params.not_included .Page.Type -}}
                       {{- else -}}
-                          {{- $resultPage = $resultPage | append .Page -}}
+                            {{- if in .Site.Params.not_posts_included  (path.Dir .File.Dir) -}}
+                            {{- else -}}
+                            {{- $resultPage = $resultPage | append .Page -}}
+                            {{- end -}}
                       {{- end -}}
                     {{- end -}}
                 {{ if gt (len $resultPage) 0}}

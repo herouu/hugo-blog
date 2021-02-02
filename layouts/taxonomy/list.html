@@ -24,27 +24,30 @@
             {{- else -}}
                 {{- $pages = .Paginate $pages -}}
             {{- end -}}
-            {{- range $key,$value := $pages.PageGroups -}}
-                {{- $resultPage := slice -}}
-                {{- range $value.Pages -}}
+            {{- range $pages.PageGroups -}}
+
+                    {{- $resultPage := slice -}}
+                    {{- range $value := .Pages -}}
                     {{- if in .Site.Params.not_included .Page.Type -}}
                     {{- else -}}
-                        {{- $resultPage = $resultPage | append .Page -}}
+                    {{- if in .Site.Params.not_posts_included  (path.Dir .File.Dir) -}}
+                    {{- else -}}
+                    {{- $resultPage = $resultPage | append .Page -}}
                     {{- end -}}
-                {{- end -}}
-                {{ if gt (len $resultPage) 0}}
+                    {{- end -}}
+                    {{- end -}}
+                {{- if gt (len $resultPage) 0 -}}
                 <h3 class="group-title">{{ .Key }}</h3>
-                {{- end -}}
-
                 {{- range $resultPage -}}
-                        <article class="archive-item">
-                            <a href="{{ .RelPermalink }}" class="archive-item-link">
-                                {{- .Title -}}
-                            </a>
-                            <span class="archive-item-date">
-                                {{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
-                            </span>
-                        </article>
+                    <article class="archive-item">
+                        <a href="{{ .RelPermalink }}" class="archive-item-link">
+                            {{- .Title -}}
+                        </a>
+                        <span class="archive-item-date">
+                            {{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
+                        </span>
+                    </article>
+                {{- end -}}
                 {{- end -}}
             {{- end -}}
             {{- partial "paginator.html" . -}}

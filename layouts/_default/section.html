@@ -11,19 +11,29 @@
 
         {{- /* Paginate */ -}}
         {{- if $pageRange := where .Site.RegularPages "Type" "not in" .Site.Params.not_included -}}
-            {{- $pages := $pageRange.GroupByDate "2006" -}}
+            {{- if gt (len .Site.Params.not_posts_included) 0 -}}
+                {{- $resultPage := slice -}}
+                {{- range $pageRange -}}
+                    {{- if in .Site.Params.not_posts_included  (path.Dir .File.Dir) -}}
+                    {{- else -}}
+                    {{- $resultPage = $resultPage | append .Page -}}
+                    {{- end -}}
+                {{- end -}}
+
+            {{- $pages := $resultPage.GroupByDate "2006" -}}
             {{- with .Site.Params.section.paginate | default .Site.Params.paginate -}}
                 {{- $pages = $.Paginate $pages . -}}
             {{- else -}}
                 {{- $pages = .Paginate $pages -}}
             {{- end -}}
+
             {{- range $pages.PageGroups -}}
                 <h3 class="group-title">{{ .Key }}</h3>
                 {{- range .Pages -}}
                     <article class="archive-item">
                         <a href="{{ .RelPermalink }}" class="archive-item-link">
                             {{- .Title -}}
-                        </a>
+                        </a>to
                         <span class="archive-item-date">
                             {{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}
                         </span>
@@ -31,6 +41,7 @@
                 {{- end -}}
             {{- end -}}
             {{- partial "paginator.html" . -}}
+            {{- end -}}
         {{- end -}}
     </div>
 {{- end -}}
