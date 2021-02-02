@@ -82,12 +82,12 @@ enableEmoji = true
         title = ""
         weight = 5
       [[languages.zh-cn.menu.main]]
-        identifier = "adelina"
+        identifier = "练手admin"
         pre = ""
         post = ""
-        name = "adelina"
-        url = "https://alertcode.github.io/adelina-core/"
-        title = "adelina"
+        name = "练手admin"
+        url = "http://101.200.79.90/"
+        title = ""
         weight = 6
     [languages.zh-cn.params]
       # 网站描述
