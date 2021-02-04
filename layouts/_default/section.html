@@ -14,8 +14,7 @@
             {{- if gt (len .Site.Params.not_posts_included) 0 -}}
                 {{- $resultPage := slice -}}
                 {{- range $pageRange -}}
-                    {{- if in .Site.Params.not_posts_included  (path.Dir .File.Dir) -}}
-                    {{- else -}}
+                    {{- if not (in .Site.Params.not_posts_included  (path.Dir .File.Dir)) -}}
                     {{- $resultPage = $resultPage | append .Page -}}
                     {{- end -}}
                 {{- end -}}
