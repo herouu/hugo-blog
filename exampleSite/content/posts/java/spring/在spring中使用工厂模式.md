@@ -18,9 +18,9 @@ featuredImage: ""
 featuredImagePreview: ""
 
 toc:
-enable: true
+    enable: true
 math:
-enable: false
+    enable: false
 lightgallery: false
 license: ""
 ---

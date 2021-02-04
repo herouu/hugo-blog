@@ -11,7 +11,7 @@ themesDir = "../.."
 
 # website title
 # 网站标题
-title = "冷眼のBlog"
+title = "herouuの时光轴"
 
 # whether to use robots.txt
 # 是否使用 robots.txt
@@ -101,7 +101,7 @@ enableEmoji = true
       # 应用图标配置
       [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-        title = "冷眼のblog"
+        title = "herouuの时光轴"
         # 是否隐藏网站图标资源链接
         noFavicon = false
         # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
@@ -161,7 +161,7 @@ enableEmoji = true
           paginate = 8
       # 主页的社交信息设置
       [languages.zh-cn.params.social]
-        GitHub = "alertcode"
+        GitHub = "herouu"
 [params]
   # LoveIt theme version
   # LoveIt 主题版本
@@ -199,7 +199,7 @@ enableEmoji = true
       logo = ""
       # title name
       # 标题名称
-      name = "冷眼のBlog"
+      name = "herouuの时光轴"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
@@ -303,7 +303,7 @@ enableEmoji = true
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
       # 是否使侧边目录自动折叠展开
-      auto = true
+      auto = false
     # Code config
     # 代码配置
     [params.page.code]
@@ -487,7 +487,7 @@ enableEmoji = true
       # Publisher info
       # 出版者信息
       [params.page.seo.publisher]
-        name = "冷眼"
+        name = "herouu"
         logoUrl = "/images/avatar.jpg"
 
   # TypeIt config
@@ -615,7 +615,7 @@ enableEmoji = true
 # Author config
 # 作者配置
 [author]
-  name = "冷眼"
+  name = "herouu"
   email = "2269648132@qq.com"
   link = "about"
 
