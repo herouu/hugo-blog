@@ -1,5 +1,5 @@
 ---
-title: springboot工程的部署 
+title: springboot使用Jenkins部署 
 date: 2021-02-04 00:07:30 
 tags: ["springboot","docker","jenkins"]
 categories: ["springboot","docker","jenkins"]
