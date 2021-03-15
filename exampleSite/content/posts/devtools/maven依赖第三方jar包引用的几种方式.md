@@ -8,8 +8,8 @@ author: ""
 authorLink: ""
 description: ""
 
-tags: ['java工具']
-categories: ['java工具']
+tags: ['devtools']
+categories: ['devtools']
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
