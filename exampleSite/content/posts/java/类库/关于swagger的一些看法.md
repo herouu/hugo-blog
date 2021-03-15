@@ -1,7 +1,8 @@
 ---
 title: 关于swagger的一些想法
 date: 2018-03-21 20:59:34
-
+tags: ['java工具']
+categories: ['java工具']
 
 ---
 
