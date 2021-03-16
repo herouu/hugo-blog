@@ -46,7 +46,8 @@ mvn deploy:deploy-file -Durl=file://${basedir}/lib/ -Dfile=C:\Users\22696\Deskto
     <repository>
         <id>my-local-repo</id>
         <name>My Repository</name>
-        <url>file://${basedir}/lib/</url>
+<!--        <url>file://${basedir}/lib/</url>-->
+        <url>file://${user.dir}/lib/</url>
         <releases>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
