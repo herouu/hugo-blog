@@ -3,13 +3,13 @@ title: "C++_web中使用conan"
 subtitle: ""
 date: 2021-05-06T19:52:17+08:00
 lastmod: 2021-05-06T19:52:17+08:00
-draft: true
+draft: false
 author: ""
 authorLink: ""
 description: ""
 
-tags: []
-categories: []
+tags: ["c++"]
+categories: ["c++"]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
