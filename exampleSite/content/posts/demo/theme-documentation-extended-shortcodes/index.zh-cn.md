@@ -7,12 +7,14 @@ draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
 description: "LoveIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode."
+resources:
+- name: "featured-image"
+  src: "featured-image.jpg"
+- name: "featured-image-preview"
+  src: "featured-image-preview.jpg"
 
-tags: ["markdown"]
-categories: ["markdown"]
-hiddenFromHomePage: false
-featuredImage: "/images/theme-documentation-extended-shortcodes/featured-image.jpg"
-featuredImagePreview: "/images/theme-documentation-extended-shortcodes/featured-image-preview.jpg"
+tags: ["shortcodes"]
+categories: ["documentation"]
 
 lightgallery: true
 mapbox:
@@ -28,11 +30,15 @@ mapbox:
 
 {{< version 0.2.0 changed >}}
 
+{{< admonition >}}
+Hugo **extended** 版本对于 `style` shortcode 是必需的.
+{{< /admonition >}}
+
 `style` shortcode 用来在你的文章中插入自定义样式.
 
 `style` shortcode 有两个位置参数.
 
-第一个参数是自定义样式的内容. 它支持 [SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting) 中的嵌套语法,
+第一个参数是自定义样式的内容. 它支持 [:(fab fa-sass fa-fw): SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting) 中的嵌套语法,
 并且 `&` 指代这个父元素.
 
 第二个参数是包裹你要更改样式的内容的 HTML 标签, 默认值是 `div`.
@@ -55,8 +61,10 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.0 >}}
 
-`link` shortcode 是 [Markdown 链接语法](../basic-markdown-syntax#links) 的替代.
+`link` shortcode 是 [Markdown 链接语法](exampleSite/content/posts/demo/basic-markdown-syntax#links) 的替代.
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用.
+
+{{< version 0.2.10 >}} 支持[本地资源引用](exampleSite/content/posts/demo/theme-documentation-content#contents-organization)的完整用法.
 
 `link` shortcode 有以下命名参数:
 
@@ -122,6 +130,8 @@ This is a **right-aligned** paragraph.
 
 `image` shortcode 是 [`figure` shortcode](../theme-documentation-built-in-shortcodes#figure) 的替代. `image` shortcode 可以充分利用 [lazysizes](https://github.com/aFarkas/lazysizes) 和 [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js) 两个依赖库.
 
+{{< version 0.2.10 >}} 支持[本地资源引用](exampleSite/content/posts/demo/theme-documentation-content#contents-organization)的完整用法.
+
 `image` shortcode 有以下命名参数:
 
 * **src** *[必需]* (**第一个**位置参数)
@@ -172,19 +182,15 @@ This is a **right-aligned** paragraph.
 
     HTML `a` 标签 的 `rel` 补充属性, 仅在 **linked** 属性设置成 `true` 时有效.
 
-* **large** *[可选]*
-
-    图片是否是大尺寸的, 用来加载动画, 仅在 **linked** 属性设置成 `false` 时有效.
-
 一个 `image` 示例:
 
 ```markdown
-{{</* image src="/images/theme-documentation-extended-shortcodes/lighthouse.jpg" caption="Lighthouse (`image`)" src-s="/images/theme-documentation-extended-shortcodes/lighthouse-small.jpg" src-l="/images/theme-documentation-extended-shortcodes/lighthouse-large.jpg" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
 ```
 
 呈现的输出效果如下:
 
-{{< image src="/images/theme-documentation-extended-shortcodes/lighthouse.jpg" caption="Lighthouse (`image`)" src-s="/images/theme-documentation-extended-shortcodes/lighthouse-small.jpg" src-l="/images/theme-documentation-extended-shortcodes/lighthouse-large.jpg" >}}
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 
 ## 4 admonition
 
@@ -934,27 +940,27 @@ data = [
 
 * **light-style** *[可选]* (**第五个**位置参数)
 
-    浅色主题的地图样式, 默认值是[前置参数](../theme-documentation-content#front-matter)或者[网站配置](../theme-documentation-basics#site-configuration)中设置的值.
+    浅色主题的地图样式, 默认值是[前置参数](exampleSite/content/posts/demo/theme-documentation-content#front-matter)或者[网站配置](exampleSite/content/posts/demo/theme-documentation-basics#site-configuration)中设置的值.
 
 * **dark-style** *[可选]* (**第六个**位置参数)
 
-    深色主题的地图样式, 默认值是[前置参数](../theme-documentation-content#front-matter)或者[网站配置](../theme-documentation-basics#site-configuration)中设置的值.
+    深色主题的地图样式, 默认值是[前置参数](exampleSite/content/posts/demo/theme-documentation-content#front-matter)或者[网站配置](exampleSite/content/posts/demo/theme-documentation-basics#site-configuration)中设置的值.
 
 * **navigation** *[可选]*
 
-    是否添加 [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), 默认值是[前置参数](../theme-documentation-content#front-matter)或者[网站配置](../theme-documentation-basics#site-configuration)中设置的值.
+    是否添加 [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), 默认值是[前置参数](exampleSite/content/posts/demo/theme-documentation-content#front-matter)或者[网站配置](exampleSite/content/posts/demo/theme-documentation-basics#site-configuration)中设置的值.
 
 * **geolocate** *[可选]*
 
-    是否添加 [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), 默认值是[前置参数](../theme-documentation-content#front-matter)或者[网站配置](../theme-documentation-basics#site-configuration)中设置的值.
+    是否添加 [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), 默认值是[前置参数](exampleSite/content/posts/demo/theme-documentation-content#front-matter)或者[网站配置](exampleSite/content/posts/demo/theme-documentation-basics#site-configuration)中设置的值.
 
 * **scale** *[可选]*
 
-    是否添加 [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), 默认值是[前置参数](../theme-documentation-content#front-matter)或者[网站配置](../theme-documentation-basics#site-configuration)中设置的值.
+    是否添加 [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), 默认值是[前置参数](exampleSite/content/posts/demo/theme-documentation-content#front-matter)或者[网站配置](exampleSite/content/posts/demo/theme-documentation-basics#site-configuration)中设置的值.
 
 * **fullscreen** *[可选]*
 
-   是否添加 [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), 默认值是[前置参数](../theme-documentation-content#front-matter)或者[网站配置](../theme-documentation-basics#site-configuration)中设置的值.
+   是否添加 [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), 默认值是[前置参数](exampleSite/content/posts/demo/theme-documentation-content#front-matter)或者[网站配置](exampleSite/content/posts/demo/theme-documentation-basics#site-configuration)中设置的值.
 
 * **width** *[可选]*
 
@@ -996,6 +1002,8 @@ data = [
 
 ### 8.1 自定义音乐 URL {#custom-music-url}
 
+{{< version 0.2.10 >}} 支持[本地资源引用](exampleSite/content/posts/demo/theme-documentation-content#contents-organization)的完整用法.
+
 `music` shortcode 有以下命名参数来使用自定义音乐 URL:
 
 * **server** *[必需]*
@@ -1017,12 +1025,12 @@ data = [
 一个使用自定义音乐 URL 的 `music` 示例:
 
 ```markdown
-{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/theme-documentation-extended-shortcodes/Wavelength.jpg" */>}}
+{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" */>}}
 ```
 
 呈现的输出效果如下:
 
-{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/theme-documentation-extended-shortcodes/Wavelength.jpg" >}}
+{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
 
 ### 8.2 音乐平台 URL 的自动识别 {#automatic-identification}
 
@@ -1262,3 +1270,28 @@ public class HelloWorld {
 {{< typeit group=paragraph >}}
 **然后**, 这个段落开始
 {{< /typeit >}}
+
+## 11 script
+
+{{< version 0.2.8 >}}
+
+`script` shortcode 用来在你的文章中插入 **:(fab fa-js fa-fw): Javascript** 脚本.
+
+{{< admonition >}}
+脚本内容可以保证在所有的第三方库加载之后按顺序执行.
+所以你可以自由地使用第三方库.
+{{< /admonition >}}
+
+一个 `script` 示例:
+
+```markdown
+{{</* script */>}}
+console.log('Hello LoveIt!');
+{{</* /script */>}}
+```
+
+你可以在开发者工具的控制台中看到输出.
+
+{{< script >}}
+console.log('Hello LoveIt!');
+{{< /script >}}

@@ -12,6 +12,7 @@
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "core-js": "^3.6.4",
+    "hugo-extended": "^0.69.0",
     "husky": "^4.2.3",
     "minimist": "^1.2.5",
     "segmentit": "^2.0.3"
@@ -19,10 +20,11 @@
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "babel": "npx babel src/js --out-file assets/js/theme.min.js --source-maps",
-    "build": "npm run babel && hugo -v --source=exampleSite --themesDir ../.. --gc",
+    "build": "npm run babel && npx hugo -v --source=exampleSite --themesDir ../.. --gc",
+    "build-coding": "npm run babel && npx hugo -v --source=exampleSite --themesDir=../.. --theme=workspace --destination=../dist --gc",
     "build-lunr-segmentit": "browserify src/lib/lunr.segmentit.js -o assets/lib/lunr/lunr.segmentit.js -t babelify --presets @babel/preset-env --presets minify",
-    "start": "npm run babel && hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender",
-    "start-production": "npm run babel && hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender -e production",
+    "start": "npm run babel && npx hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender",
+    "start-production": "npm run babel && npx hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender -e production",
     "check": "htmlproofer exampleSite/public --check-html --allow-hash-href --empty-alt-ignore --disable-external",
     "copy": "rm -rf resources && cp -rf exampleSite/resources resources"
   },
