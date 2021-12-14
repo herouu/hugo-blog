@@ -29,7 +29,7 @@ java 虚拟机的内存关系:
 
 ### 内存分配区域如下：
 
-![img](https://bj.bcebos.com/v1/alertcode-blog/java虚拟机2_内存管理/Snipaste_2020-07-29_18-09-57.png)
+![img](images/java虚拟机2_内存管理/Snipaste_2020-07-29_18-09-57.png "java虚拟机")
 
 ### 由所有线程共享的数据区
 

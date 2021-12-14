@@ -29,7 +29,7 @@ if(){
 
 #### 目录结构
 
-![目录结构](<https://bj.bcebos.com/v1/alertcode-blog/Drools_1：springboot整合drools(以.drl文件方式)/springboot-drools-1.png>)
+![目录结构](<images/Drools_1：springboot整合drools(以.drl文件方式)/springboot-drools-1.png> "springboot整合drools")
 
 #### pom.xml
 

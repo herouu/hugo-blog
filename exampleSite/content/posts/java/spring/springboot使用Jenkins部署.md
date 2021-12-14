@@ -85,7 +85,7 @@ docker kill ruoyi-admin
 docker rm ruoyi-admin 
 docker run -d -p 8080:8080 --name ruoyi-admin -v /root/logs:/logs springboot/ruoyi-admin:3.3.0
 ```
-![img](https://bj.bcebos.com/v1/alertcode-blog/spring_boot工程在docker容器中启动/springboot-docker.png)
+![img](images/spring_boot工程在docker容器中启动/springboot-docker.png "spring_boot工程在docker容器中启动")
 
 
 ### 使用阿里云效

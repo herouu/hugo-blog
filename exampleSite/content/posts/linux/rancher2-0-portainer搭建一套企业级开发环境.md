@@ -33,7 +33,7 @@ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.
 
 ### 效果图
 
-![portainer效果图](https://bj.bcebos.com/v1/alertcode-blog/rancher2.0+portainer快速搭建一套企业开发环境/portainer运行效果图.png "portainer运行效果图")
+![portainer效果图](images/rancher2.0+portainer快速搭建一套企业开发环境/portainer运行效果图.png "portainer运行效果图")
 
 ### rancher2.0 +k8s 环境搭建
 

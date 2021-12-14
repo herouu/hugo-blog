@@ -27,12 +27,12 @@ Service service = (Service) ctx.getBean("service");
 - ApplicationEventPublisher
 - ResourcePatternResolver
 
-![ApplicationContext继承关系](https://bj.bcebos.com/v1/alertcode-blog/Spring源码分析（二）：说说ApplicationContext接口/ApplicationContext继承关系.png)
+![ApplicationContext继承关系](images/Spring源码分析（二）：说说ApplicationContext接口/ApplicationContext继承关系.png "Spring源码分析")
 
 ### ApplicationContext 接口的实现
 
 &emsp;&emsp;ApplicationContext 接口的实现主要有三个 ClassPathXmlApplicationContext，AnnotationConfigWebApplicationContext，FileSystemXmlApplicationContext
-![ApplicationContext比较重要的几个实现](https://bj.bcebos.com/v1/alertcode-blog/Spring源码分析（二）：说说ApplicationContext接口/ApplicationContext比较重要的几个实现.png)
+![ApplicationContext比较重要的几个实现](images/Spring源码分析（二）：说说ApplicationContext接口/ApplicationContext比较重要的几个实现.png "Spring源码分析")
 
 ### 鸡肋的实现类，牛 B 的抽象类
 

@@ -39,11 +39,11 @@ gitee page的话，限制太多，访问速度面向国内，自然在国内的�
 
 本来想把hugo生成的静态资源使用github page的方式进行发布，但是github page使用的是 jekyll 生成的，对于loveIt主题的short code指令无法识别，构建静态页的时候警告且构建不成功。总不能一个一个页面去改，所以放弃github page。如果是使用hexo构建页面，hexo没有特殊的指令，github是完全支持的。个人猜测出现这种情况的原因是因为运行`hugo    --source=exampleSite`生成的文件多了index.md文件，这个在hexo中是不存在的。
 
-![image-20200701234108104](https://bj.bcebos.com/v1/alertcode-blog/hugo博客优化/image-20200701234108104.png)
+![image-20200701234108104](images/hugo博客优化/image-20200701234108104.png "hugo博客优化")
 
 coding.net  page本来自己也是不想用的。但是相对于netlify的话访问是快了不少。估计是被腾讯收购了以后，线路优化了。恰好静态页部署在coding上，没有出现github page类似的情况。速度上不是最优的，但是可以接受，总比200ms要強上许多。
 
-![image-20200702000044142](https://bj.bcebos.com/v1/alertcode-blog/hugo博客优化/image-20200702000044142.png)
+![image-20200702000044142](images/hugo博客优化/image-20200702000044142.png "hugo博客优化")
 
 ### PicGo+Typora让写飞起来
 
@@ -51,11 +51,11 @@ coding.net  page本来自己也是不想用的。但是相对于netlify的话访
 
 演示如下：
 
-![](https://bj.bcebos.com/v1/alertcode-blog/hugo博客优化/20200702003833.gif)
+![](images/hugo博客优化/20200702003833.gif "hugo博客优化")
 
 Typora图片配置
 
-![image-20200702002647407](https://bj.bcebos.com/v1/alertcode-blog/hugo博客优化/20200702002649.png)
+![image-20200702002647407](images/hugo博客优化/20200702002649.png "hugo博客优化")
 
 
 

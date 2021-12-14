@@ -28,7 +28,7 @@ date: 2019-02-05 22:48:23
 - 优点
   &emsp;&emsp;性能牛 X，简洁，不像 java 般啰嗦！虽然接口比较简单，但是几毫秒还是比较牛叉的,不知道是不是框架调用的代码行数比较少的原因。
 
-![gin框架性能](https://bj.bcebos.com/v1/alertcode-blog/Go-Web初识/gin框架性能.png)
+![gin框架性能](images/Go-Web初识/gin框架性能.png "gin框架性能")
 
 ### 总结一下
 

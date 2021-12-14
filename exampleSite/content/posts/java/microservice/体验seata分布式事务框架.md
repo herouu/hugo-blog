@@ -213,6 +213,6 @@ localhost:9091/order/placeOrder/rollback
 
 ## 5.运行结果日志示例
 ### 运行出错
-![](https://bj.bcebos.com/v1/alertcode-blog/体验seata分布式事务框架/seata-1.png)
+![](images/体验seata分布式事务框架/seata-1.png "seata")
 ### 运行成功
-![](https://bj.bcebos.com/v1/alertcode-blog/体验seata分布式事务框架/seata-2.png)
+![](images/体验seata分布式事务框架/seata-2.png "seata")

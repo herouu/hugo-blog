@@ -135,4 +135,4 @@ public void getRule() {
 
 #### 结果
 
-![验证结果](https://bj.bcebos.com/v1/alertcode-blog/Drools_2：springboot整合drools（以数据库方式）/drools数据库-1.png)
+![验证结果](images/Drools_2：springboot整合drools（以数据库方式）/drools数据库-1.png "springboot整合drools")

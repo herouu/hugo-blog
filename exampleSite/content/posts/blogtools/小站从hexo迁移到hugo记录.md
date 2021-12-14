@@ -61,7 +61,7 @@ iwr -useb get.scoop.sh | iex
 ### fork主题后添加git submodele
 
 在github上fork loveIt主题为自己的主题,方便以后修改。将生成的站点使用git管理，并添加submodeles为自己fork后的loveIt主题,并clone到themes文件夹下。
-![](https://bj.bcebos.com/v1/alertcode-blog/小站从hexo迁移到hugo记录/git-fork添加GitSubmodule.png)
+![](images/小站从hexo迁移到hugo记录/git-fork添加GitSubmodule.png "小站从hexo迁移到hugo记录")
 
 ### config.toml配置
 将主题中的simpleSite路径下的config.toml粘贴到themes同级目录下
@@ -116,7 +116,7 @@ github站点部署到netlify主要参考 [手把手教你使用Netlify部署博�
 
 ```
 * 注意下图位置，什么也不需要填，在netlify.toml中必要项已配置
-![](https://bj.bcebos.com/v1/alertcode-blog/小站从hexo迁移到hugo记录/netlify_build_settings.png)
+![](images/小站从hexo迁移到hugo记录/netlify_build_settings.png "小站从hexo迁移到hugo记录")
 
 
 ## 站内搜索  
@@ -423,12 +423,12 @@ algolia:
 ### 个人简介(关于) 
 使用hugo-orbit-theme主题,在原主题的基础上，通过cdn加速js、css加载，添加首次浏览，密码简单校验的功能。
 
-![预览效果](https://bj.bcebos.com/v1/alertcode-blog/小站从hexo迁移到hugo记录/简历预览.png)
+![预览效果](images/小站从hexo迁移到hugo记录/简历预览.png "小站从hexo迁移到hugo记录")
 
 
 ### 移动端优化  
 因为添加了搜索按钮、造成站点在移动端现实不美观，更改了按钮的布局样式
-![](https://bj.bcebos.com/v1/alertcode-blog/小站从hexo迁移到hugo记录/按钮布局.png)
+![](images/小站从hexo迁移到hugo记录/按钮布局.png "小站从hexo迁移到hugo记录")
 
 ### 自动构建algolia索引
 #### 安装node.js

@@ -74,9 +74,9 @@ public class GcOOM {
 #### 验证结果
 这两个问题，用上面的代码进行验证，a,b的实例存在java堆中，当引用为null,执行gc，堆中的内存被释放
 删除a=null,执行gc
-![](https://bj.bcebos.com/v1/alertcode-blog/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_12-19-54.png)
+![](images/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_12-19-54.png "java虚拟机")
 添加a=null这行代码，执行gc
-![](https://bj.bcebos.com/v1/alertcode-blog/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_12-16-01.png)
+![](images/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_12-16-01.png "java虚拟机")
 ### 问题2
 {{< admonition type=question title="" open=true >}}
 静态变量a存在jvm的方法区，那么a的实例存在哪？
@@ -102,7 +102,7 @@ public class GcOOM {
 }
 ```
 #### 验证结果
-![](https://bj.bcebos.com/v1/alertcode-blog/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_12-32-16.png)
+![](images/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_12-32-16.png "java虚拟机")
 ### 问题3
 {{< admonition type=question title="" open=true >}}
 a,b都是强引用，是不是真的不会进行垃圾回收，但假如强引用在线程内部，线程销毁，b的实例会不会被回收？
@@ -145,4 +145,4 @@ public class ThreadGc {
 }
 ```
 #### 验证结果
-![](https://bj.bcebos.com/v1/alertcode-blog/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_15-16-26.png)
+![](images/java虚拟机5_对象强引用GC验证/Snipaste_2020-07-29_15-16-26.png "java虚拟机")

@@ -14,7 +14,7 @@ tags: ["spring源码"]
 &emsp;&emsp;记得自己刚接触 spring 的时候，使用最多还是 Servlet3.0 版本,现在 Servlet 都干到 4.0.1 了，不禁感叹，岁月真是一把杀猪刀，恍惚之间，好几年过去了，跑偏了。这里为什么会说到 Servlet？现在做项目的时候可能很少用 servlet+jsp 这样的技术组合，用这样的技术组合可能是上一代 java 开发的故事了，但是 servlet 不重要了吗？不，很重要。关于 Servlet 是什么？请参考[维基百科](https://zh.wikipedia.org/wiki/Java_Servlet)，通俗的解释就是，web 应用基于 HTTP 协议，而 servlet 是 sun 公司提供一套规范（接口），用来处理客户端请求、响应给浏览器的动态资源，而接口的实现交给容器（tomcat,jetty...）。只是现在开发的 java web 应用都是基于 spring,spring 对 http 请求的发送以及响应封装的太好了，以至于 servlet 这种东西已然成了底层的底层：
 `spring->spring源码->servlet->HTTP/HTTP2`层级关系大概是这样的。
 &emsp;&emsp;如果使用的是 tomcat，tomcat 实现了 servlet 规范，在启动 tomcat 的时候，初始化资源，调用实现 ServletContextListener 接口的对象，spring 框架的初始化即由此时开始。
-![tomcat启动，加载web.xml](https://bj.bcebos.com/v1/alertcode-blog/Spring源码分析（一）：如何阅读spring源码/tomcat容器初始化加载ContextLoaderListener.jpg)
+![tomcat启动，加载web.xml](images/Spring源码分析（一）：如何阅读spring源码/tomcat容器初始化加载ContextLoaderListener.jpg "Spring源码分析")
 &emsp;&emsp;在 ContextLoaderListener 实现的 contextInitialized 方法中调用的 initWebApplicationContext 方法是一切的开始。
 
 ```Java
@@ -28,9 +28,9 @@ public void contextInitialized(ServletContextEvent event) {
 ### 怎么看 spring 框架的源码
 
 &emsp;&emsp;既然知道 ContextLoaderListener 是一切的入口，那自然从入口处开始 debug 是再好不过的选择，但是我们要新建一个 spring 工程，配置 web.xml 吗，当然不用。我 debug 的方式是，直接下载 git clone spring 的源码工程，按照 import-into-idea.md 文件描述的步骤，将工程导入 idea,去掉`spring-aspects`工程，如下图所示：
-![去掉spring-aspects工程后编译](https://bj.bcebos.com/v1/alertcode-blog/Spring源码分析（一）：如何阅读spring源码/spring源码解析_20181231222538.png)
+![去掉spring-aspects工程后编译](images/Spring源码分析（一）：如何阅读spring源码/spring源码解析_20181231222538.png "Spring源码分析")
 &emsp;&emsp;找到 org.springframework.web.context.ContextLoaderTests 单元测试，直接对 testContextLoaderListenerWithDefaultContext 方法进行 debug,看源码原来如此简单 😄😄😏
-![junit开始源码阅读](https://bj.bcebos.com/v1/alertcode-blog/Spring源码分析（一）：如何阅读spring源码/spring-1-源码阅读的开始_20181231223217.png)
+![junit开始源码阅读](images/Spring源码分析（一）：如何阅读spring源码/spring-1-源码阅读的开始_20181231223217.png "Spring源码分析")
 
 ### ContextLoader.initWebApplicationContext 方法
 

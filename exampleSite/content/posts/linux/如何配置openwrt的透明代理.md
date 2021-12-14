@@ -58,33 +58,33 @@ wget -O /tmp/delegated-apnic-latest 'http://ftp.apnic.net/apnic/stats/apnic/dele
 
 #### 服务器管理 添加服务器
 
-![ss_服务器管理.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/ss_服务器管理.png)
+![ss_服务器管理.png](images/如何配置openwrt的透明代理/ss_服务器管理.png "如何配置openwrt的透明代理")
 
 #### 访问控制
 
-![ss_访问控制.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/ss_访问控制.png)
+![ss_访问控制.png](images/如何配置openwrt的透明代理/ss_访问控制.png "如何配置openwrt的透明代理")
 
 #### 基本设置 开启透明代理
 
-![ss_基本设置.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/ss_基本设置.png)
+![ss_基本设置.png](images/如何配置openwrt的透明代理/ss_基本设置.png "如何配置openwrt的透明代理")
 
 ### DNS 转发设置
 
-![DNS转发设置.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/DNS转发设置.png)
+![DNS转发设置.png](images/如何配置openwrt的透明代理/DNS转发设置.png "如何配置openwrt的透明代理")
 
 ### chinaDNS 设置
 
-![chinaDNS设置.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/chinaDNS设置.png)
+![chinaDNS设置.png](images/如何配置openwrt的透明代理/chinaDNS设置.png "如何配置openwrt的透明代理")
 
 ### 网络-> DHCP/DNS 设置
 
 #### 基本设置
 
-![DHCP_DNS基本设置.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/DHCP_DNS基本设置.png)
+![DHCP_DNS基本设置.png](images/如何配置openwrt的透明代理/DHCP_DNS基本设置.png "如何配置openwrt的透明代理")
 
 #### hosts 和解析文件设置
 
-![DHCP_DNS_hosts和解析文件.png](https://bj.bcebos.com/v1/alertcode-blog/如何配置openwrt的透明代理/DHCP_DNS_hosts和解析文件.png)
+![DHCP_DNS_hosts和解析文件.png](images/如何配置openwrt的透明代理/DHCP_DNS_hosts和解析文件.png "如何配置openwrt的透明代理")
 &emsp;&emsp;这些设置完毕，透明代理也就完成了，查个资料还是很方便的。
 
 ## 参考资料：

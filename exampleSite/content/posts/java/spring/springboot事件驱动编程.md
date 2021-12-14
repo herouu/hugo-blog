@@ -11,7 +11,7 @@ tags: ["springboot"]
 <!--more-->
 
 &emsp;&emsp;事件监听机制结构图如下：
-![spring事件监听机制结构图.png](https://bj.bcebos.com/v1/alertcode-blog/springboot事件驱动编程/事件监听架构图.png)
+![spring事件监听机制结构图.png](images/springboot事件驱动编程/事件监听架构图.png "springboot事件驱动编程")
 
 ### 业务处理完成后发送事件（生产者）
 

@@ -37,7 +37,7 @@ rabbitMQ的介绍及简单使用
 
 ### 模型
 
-![](https://bj.bcebos.com/v1/alertcode-blog/rabbitMQ消息队列/mq-rabbitmq-model.png)
+![](images/rabbitMQ消息队列/mq-rabbitmq-model.png "rabbitmq")
 
 ### 环境搭建
 

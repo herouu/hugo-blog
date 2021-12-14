@@ -11,18 +11,6 @@ description: ""
 tags: ['arduino']
 categories: ['arduino']
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-
-featuredImage: ""
-featuredImagePreview: ""
-
-toc:
-  enable: false
-math:
-  enable: false
-lightgallery: false
-license: ""
 ---
 闲来无事，在国庆这天折腾下硬件。
 <!--more-->
@@ -30,11 +18,11 @@ license: ""
 回到最初的问题，如果想程序控制一个最小电路，至少得让单片机执行汇编语言，用C语言操作汇编语言，因为汇编语言的不同，操作不同的汇编语言就需要包含不同的包，C中称为头文件，所以操作51单片机，跟avr单片机引用的头文件不同。单片机执行指令，输出信号，这个信号本质上是高低电平，也就是计算机为什么只能识别0，1的原因。
 8051系列是经典，上手有点难，得基于keil环境下开发，keil是商用的，想找开源的解决方案，sdcc，编译虽然成功，但是烧录失败，也不知道是不是芯片坏了，也就放弃了，感觉应了下面的段子。
 
-{{< bilibili id=BV1Eb411p7CK >}}
-
 手里有arduino,其算是一个硬件开源平台，使用的是Atmel AVR单片机，跟自己使用的51单片机开发板差不多。构成单片机最小系统，电源+晶振+复位电路+单片机，arduino自然也满足,只不过功能更强大，具体强大的地方，有时间再接着研究。
 
-![](https://bj.bcebos.com/v1/alertcode-blog/单片机最小系统/单片机最小系统.png)
+
+![](images/单片机最小系统/单片机最小系统.png "单片机最小系统" )
+
 自己使用的是vscode+platformIO插件进行开发，写了一个arduino控制led灯闪烁的入门级案例。本质上也是通过程序控制引脚的高低电平。
 
 ```c
